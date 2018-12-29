@@ -1,0 +1,15 @@
+3.4 Problems
+(1) One issuewith substitution ciphers is the difficulty of remembering the key. There
+is a version of the substitution cipher that uses a key word that makes it easier
+20 3 Substitution Ciphers
+to remember. To set this up, pick a key word that has no repeated letters (or else
+delete the repeated letters). Then, append to the key word all the unused letters in
+the alphabet, starting from the last letter in the key word. This is a permutation of
+the letters in the alphabet, and it serves as the key. For example, if the key word is
+LIME, then the full key would be LIMEFGHJKNOPQRSTUVWXYZABCD. That
+means that we encrypt a as L, b as I, and so forth.
+The message
+VOQDK MABJJ DZAXC ABAEE YCEVC OGDZH RGAJR
+UQDKZ KHJOV GHJRG CAJCJ UCKBV LCGHC
+was encrypted in this way using the key word APRICOT. What is the plaintext
+message?
