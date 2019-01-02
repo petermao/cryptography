@@ -1,0 +1,62 @@
+* general info
+  - NOTE: terminal commands are enclosed in single quotes ('').
+  - NOTE: the unix prompt will be denoted $ here.
+
+  - I'm using Ubuntu as my OS (on a GNU/Linux system, try 'uname -a')
+  - I have python 2.7.15rc1 ('python' or 'python2') and python 3.6.7
+    ('python3')
+  - 'sage' is built on top of python2, so anything you write in python
+    will work in sage.
+  - python can be interactive, but there's also 'ipython' ('ipython2'
+    and 'ipython3')
+
+* on programming
+  - The examples I'll give you look really (almost stupidly) easy.
+    They are intended to get you started for reading and writing more
+    complicated programs.
+  - Most of programming is knowing what can be done and finding the
+    way to do it.
+  - 'scratch' is a good language to start with, since it shows you the
+    basic elements of programming in an intuitive layout.
+  - The most important elements are variables, branches (if
+    statements) and loops (for, while, do, etc.)
+
+* first program: hello world
+  - in a text editor of your choice, put in the following lines:
+    print("Hello world!");
+  - save the file as "hello.py"
+  - many ways to run this program (sage is like ipython and #3 is not recommended)
+    1. $ python hello.py
+    2. $ ipython
+       In [1]: %run hello
+       In [2]: exit()
+    3. $ python
+       >>> exec(open('hello.py').read())
+       >>> exit()
+
+* second program: hello world, v2
+  - example with variables
+  - put this in a file, call it "hello2.py"
+    greeting = "Hello";
+    recipient = "world";
+    punctuation = "!";
+    print "%s %s%s"%(greeting, recipient, punctuation);
+    
+* third program: reading command line arguments
+  - call this one "example_args.py"
+    import sys;
+
+    print(sys.argv); # prints all of the arguments on the cmd line
+    if (len(sys.argv) > 1):
+        print(sys.argv[1]); # prints the first optional argument
+
+  - try running 'python example_args.py'
+  - try running 'python example_args.py abc def hij'
+
+* fourth program: hello, v3
+  - call this one "hello3.py"
+  - you figure out how to write it
+  - if I call it with 'python hello3.py banana', it should output
+    "Hello banana!"
+
+
