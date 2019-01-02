@@ -1,3 +1,11 @@
+#+STARTUP: showall
+* unix commands to know.  
+  mostly things won't work as advertised if you're not in the right
+  directory
+  - 'ls' lists the contents of your current directory (folder)
+  - 'cd' changes directories (or folders)
+
+
 * general info
   - NOTE: terminal commands are enclosed in single quotes ('').
   - NOTE: the unix prompt will be denoted $ here.
@@ -40,7 +48,7 @@
     greeting = "Hello";
     recipient = "world";
     punctuation = "!";
-    print "%s %s%s"%(greeting, recipient, punctuation);
+    print("%s %s%s"%(greeting, recipient, punctuation));
     
 * third program: reading command line arguments
   - call this one "example_args.py"
