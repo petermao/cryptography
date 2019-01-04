@@ -68,3 +68,11 @@
     "Hello banana!"
 
 
+* loops
+  use a "for" loop to print out all the arguments in sys.argv.
+  for kk in range(10):
+    print(kk);
+* writing to file
+  fid = open('deleteme.txt','w');
+  fid.write("hello world");
+  fid.close();
