@@ -4,7 +4,9 @@
   directory
   - 'ls' lists the contents of your current directory (folder)
   - 'cd' changes directories (or folders)
-
+  - 'pwd' print working directory
+  - 'more', 'less', or 'cat' so see files from command line (shell)
+  - 'pkg list-all | grep xyz' to look for package xyz on a chrome book
 
 * general info
   - NOTE: terminal commands are enclosed in single quotes ('').
