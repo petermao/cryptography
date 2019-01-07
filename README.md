@@ -27,7 +27,7 @@ $ mkdir PHM
 
 then copy the files you need into the subdirectory with "cp"
 
-$ cp *.py PHM/
+$ cp *cipher.txt PHM/
 
 move into your subdirectory with "cd"
 
