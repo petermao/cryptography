@@ -78,3 +78,16 @@
   fid = open('deleteme.txt','w');
   fid.write("hello world");
   fid.close();
+* reading from a file
+  fid = open('deleteme.txt','r');
+  data = fid.read();
+  fid.close();
+* iterables
+** list
+   mylist = [1,2,3,'dog','cat']
+** tuple: I use these only as inputs for functions, I avoid them as variables, since they can't be chamged!
+   mytuple = (1,2,3,'horse')
+** dict
+   mydictionary = {'the':1, 'and':1}
+   mydictionary.update( {'for':1} )
+   mydictionary['and'] += 1
