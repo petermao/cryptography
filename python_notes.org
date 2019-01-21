@@ -80,11 +80,14 @@
   fid.close();
 * reading from a file
   fid = open('deleteme.txt','r');
-  data = fid.read();
+  data1 = fid.read();
+  fid.seek(0); # "rewinds" the file
+  data2 = fid.read().replace(' ','') # removes spaces from the read-in text.
   fid.close();
-* iterables
+* containers or iterables
 ** list
    mylist = [1,2,3,'dog','cat']
+   mylist.append(5)
 ** tuple: I use these only as inputs for functions, I avoid them as variables, since they can't be chamged!
    mytuple = (1,2,3,'horse')
 ** dict
