@@ -25,7 +25,7 @@ def war(initial_condition = "random", ptime=.1 , makeplot=0):
 
     play = 0
     if (makeplot > 0):
-        clf()
+        plt.clf()
 
     while ((len(handA) > 0) and (len(handB) > 0)):
 
@@ -63,14 +63,14 @@ def war(initial_condition = "random", ptime=.1 , makeplot=0):
         print "%3d: (%2d) [%2d|%2d] (%2d)" % (play, len(handA), cardA, cardB, len(handB))
         if (makeplot > 0):
             if ((play-1)%100 == 0):
-                plt.figure(ceil(play/100.0))
+                plt.figure(np.ceil(play/100.0))
             plt.subplot(311)
             plt.plot(play,len(handA),'rs')
             plt.plot(play,len(handB),'bo')
             plt.ylabel('# cards')
             plt.subplot(312)
-            plt.plot(play,mean(handA),'rs')
-            plt.plot(play,mean(handB),'bo')
+            plt.plot(play,np.mean(handA),'rs')
+            plt.plot(play,np.mean(handB),'bo')
             plt.ylabel('avg card value')
             plt.subplot(313)
             plt.plot(play,cardA,'rs')
