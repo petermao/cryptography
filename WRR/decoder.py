@@ -29,8 +29,8 @@ c = raw_input('What kind of cipher? ')
 
 if b == "encryption":
   if c == "ceaser":
-    d = raw_input('What is the shift? ')
-    print(shift(a, d))
+    d = int(raw_input('What is the shift? '))
+    for i in range(d):print(shift(a, i-1))
   else:
     if c == "substitution":
       set
