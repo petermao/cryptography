@@ -65,10 +65,15 @@
 
 * fourth program: hello, v3
   - call this one "hello3.py"
+  - have this program return each argument on a separate line for an
+    arbitrary number of arguments.
   - you figure out how to write it
   - if I call it with 'python hello3.py banana', it should output
     "Hello banana!"
-
+  - if I call it with 'python hello3.py dog cat mouse', it should output
+    "Hello dog!"
+    "Hello cat!"
+    "Hello mouse!"
 
 * loops
   use a "for" loop to print out all the arguments in sys.argv.
