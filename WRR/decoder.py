@@ -30,7 +30,7 @@ c = raw_input('What kind of cipher? ')
 if b == "encryption":
   if c == "ceaser":
     d = int(raw_input('What is the shift? '))
-    for i in range(d):print(shift(a, i-1))
+    for i in range(d):print(shift(a, d))
   else:
     if c == "substitution":
       set
