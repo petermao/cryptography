@@ -4,6 +4,7 @@
 # cipher to encode or decode a message. Simply input a keyword and some text.
 
 import re
+import textwrap
 
 abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 abcList = tuple(abc)
@@ -52,7 +53,12 @@ def decode(ciphertext: str, keyword: str):
         for letter in ciphertext:
             decoded += abc[key.index(letter)]
 
-        return decoded
+        encoded = textwrap.wrap(decoded, 5)
+        
+        for i in encoded:
+            encoded[encoded.index(i)] = i.lower()
+
+        return " ".join(encoded)
 
     else:
         raise ValueError("The encoded text must not contain non-Latin alphabet characters.")
@@ -68,7 +74,12 @@ def encode(plaintext: str, keyword: str):
         for letter in plaintext:
             encoded += key[abc.index(letter)]
 
-        return encoded
+        decoded = textwrap.wrap(encoded, 5)
+
+        for i in decoded:
+            decoded[decoded.index(i)] = i.upper()
+
+        return " ".join(encoded)
 
     else:
         raise ValueError("The input text must not contain non-Latin alphabet characters.")
