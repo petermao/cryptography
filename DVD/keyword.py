@@ -1,3 +1,5 @@
+# WRITTEN FOR PYTHON 3
+
 # This file uses the keyword variant of the substitution
 # cipher to encode or decode a message. Simply input a keyword and some text.
 
