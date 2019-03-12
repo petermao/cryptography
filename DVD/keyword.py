@@ -16,9 +16,8 @@ def kwToKey(keyword: str):
 
         lastLetterIndex = abcList.index(keyword.upper()[-1])
         _abc = list(abcList[lastLetterIndex:])
-        for i in abcList[:lastLetterIndex]:
-            _abc.append(i)
-
+        _abc = _abc + list(abcList[:lastLetterIndex])
+        
         _kw = ""
         
         for letter in keyword.upper():
