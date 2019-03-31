@@ -1,0 +1,46 @@
+#+STARTUP: showall
+
+* Abstract
+
+  Decrypting substitution-type ciphers requires that we have
+  information on the frequencies of n-grams in the ciphertext.  "M-x
+  decipher" in emacs will give you the letter and bi-gram frequencies,
+  but we'll need frequencies of three and more letter patterns in the
+  ciphertext.
+
+  I will try to start you on the elements of this program, but I hope
+  that you (as a group) will be able to take the design of the program
+  into your own hands.
+
+  For consistency, name the program "ngramFT.py" (so I can find it in
+  your subdirectory when you "git push" your work to the github.
+
+* STEP 1
+
+  Copy the example program from page 14 of SRS (your Cryptography
+  book).  BUT NOT THE VARIABLE "ciphertet".  Instead, use your
+  knowledge of reading files to set that variable to the CONTENTS of a
+  file that you specify as the sys.argv[1] argument on a command-line
+  call to ngramFT.py.
+
+  In other words, you will have some file, let's call it
+  "deleteme.txt" for now, and you will get the letter frequencies of
+  that file by calling:
+
+  $ python ngramFT.py deleteme.txt
+
+  and the output should tell you how many times each letter shows up
+  in the file "deleteme.txt"
+
+* STEP 2
+  
+  Expand the program so that it will also give you the number of times
+  each 2-letter pattern shows up.
+
+  Warning: the technique that SRS uses on page 14 may not scale up
+  nicely!
+
+  Be ready to show your results &/| ideas next time we meet.
+
+
+  
