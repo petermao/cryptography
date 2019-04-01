@@ -1,0 +1,4 @@
+You have reached a file that contains only alphabetical or A through Z characters and spaces and newlines
+This is mainly testing for ngram frequencies
+Dont mind this file
+DVD
