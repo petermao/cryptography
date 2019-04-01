@@ -2,8 +2,6 @@ import datetime
 import re
 import sys
 
-abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 frequencies = {}
 
 args = sys.argv
@@ -36,17 +34,9 @@ c_len = len(content)
 
 content = content.upper() # standardize case
 
-for letter in abc:
-    frequencies[letter] = 0
-
-for char in content:
-    ind = abc.find(char)
-
-    frequencies[abc[ind]] += 1
-
 half_c_len = c_len // 2
 
-for n_to_count in range(0, half_c_len + 1):
+for n_to_count in range(1, half_c_len + 1):
     print("Counting strings of length", n_to_count)
     for ind in range(0, c_len - (n_to_count - 1)):
         string_to_count = content[ind:ind + n_to_count + 1]
