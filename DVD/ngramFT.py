@@ -41,6 +41,9 @@ for n_to_count in range(1, half_c_len + 1):
     for ind in range(0, c_len - (n_to_count - 1)):
         string_to_count = content[ind:ind + n_to_count + 1]
 
+        if string_to_count in frequencies:
+            continue
+
         matches = re.findall(string_to_count, content)
     
         frequencies[string_to_count] = len(matches)
