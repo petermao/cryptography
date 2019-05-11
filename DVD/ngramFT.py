@@ -3,19 +3,21 @@ import re
 import sys
 
 frequencies = {}
-one_occurence = []
+one_occurrence = []
 
 args = sys.argv
 
+
 def usage():
     print("Usage: (python version) ngramFY.py <file>")
+
 
 if len(args) != 2:
     usage()
     exit()
 
 try:
-    fp = open(args[1]) # read mode is default
+    fp = open(args[1])  # read mode is default
 except FileNotFoundError:
     print("Invalid file!")
     usage()
@@ -33,7 +35,7 @@ if not content.isalpha():
 
 c_len = len(content)
 
-content = content.upper() # standardize case
+content = content.upper()  # standardize case
 
 half_c_len = c_len // 2
 
@@ -50,7 +52,7 @@ for n_to_count in range(1, half_c_len + 1):
         if len(matches) > 1:
             frequencies[string_to_count] = len(matches)
         else:
-            one_occurence.append(string_to_count)
+            one_occurrence.append(string_to_count)
 
 fname = "ngram-results-"
 
@@ -66,20 +68,20 @@ try:
     fp = open(fname, "x")
     fp.close()
 except FileExistsError:
-    print("Output file", fname, "already exisits.")
+    print("Output file", fname, "already exists.")
     exit()
 
 with open(fname, "w") as fp:
     for k in frequencies:
         fp.write(k + ": " + str(frequencies[k]) + "\n")
-    if len(one_occurence) == 0:
+    if len(one_occurrence) == 0:
         pass
-    elif len(one_occurence) == 1:
-        fp.write(one_occurence[0] + "appeared only once.\n")
+    elif len(one_occurrence) == 1:
+        fp.write(one_occurrence[0] + "appeared only once.\n")
         pass
     else:
-        fp.write("\nThe following strings occured only once:\n")
-        for occ in one_occurence:
+        fp.write("\nThe following strings occurred only once:\n")
+        for occ in one_occurrence:
             fp.write(occ + "\n")
 
 print("Output written to", fname)
