@@ -1,4 +1,3 @@
-import datetime
 import re
 import sys
 
@@ -9,7 +8,13 @@ args = sys.argv
 
 
 def usage():
-    print("Usage: (python version) ngramFY.py <file>")
+    print(
+        """
+        Usage: (python version) ngramFY.py <file>
+        Outputs a dictionary with substrings as keys and counts as values, then a list of substrings that occur only once.
+        This can generate a lot of output, so feel free to pipe.
+        """
+    )
 
 
 if len(args) != 2:
@@ -54,34 +59,5 @@ for n_to_count in range(1, half_c_len + 1):
         else:
             one_occurrence.append(string_to_count)
 
-fname = "ngram-results-"
-
-date = datetime.date.today()
-fname += str(date.year) + "-" + str(date.month) + "-" + str(date.day)
-
-t = datetime.datetime.time(datetime.datetime.now())
-fname += "-" + str(t.hour) + "-" + str(t.minute) + "-" + str(t.second)
-
-fname += ".txt"
-
-try:
-    fp = open(fname, "x")
-    fp.close()
-except FileExistsError:
-    print("Output file", fname, "already exists.")
-    exit()
-
-with open(fname, "w") as fp:
-    for k in frequencies:
-        fp.write(k + ": " + str(frequencies[k]) + "\n")
-    if len(one_occurrence) == 0:
-        pass
-    elif len(one_occurrence) == 1:
-        fp.write(one_occurrence[0] + "appeared only once.\n")
-        pass
-    else:
-        fp.write("\nThe following strings occurred only once:\n")
-        for occ in one_occurrence:
-            fp.write(occ + "\n")
-
-print("Output written to", fname)
+print(frequencies)
+print(one_occurrence)
