@@ -45,7 +45,6 @@ content = content.upper()  # standardize case
 half_c_len = c_len // 2
 
 for n_to_count in range(1, half_c_len + 1):
-    print("Counting strings of length", n_to_count)
     for ind in range(0, c_len - (n_to_count - 1)):
         string_to_count = content[ind:ind + n_to_count]
 
