@@ -1,0 +1,8 @@
+(3) The message
+
+WBJGW RBGRC BRKHW RJKCK RZZDR CDZRW BJLGV
+TNTPT JKCIR LBERH JKCCE IPRMR HPCBR JCARK
+VWBUK VTKBC CBRRM RHYBR NIRSC HRILK WBDCR
+KHPWK JKVRR OTGKC DDCJW KR
+is a ciphertext encrypted using the mechanism in problem 1. What is the plaintext
+message?
