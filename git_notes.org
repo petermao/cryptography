@@ -1,0 +1,9 @@
+* add user directory to github, first time
+from this directory, in the shell, run:
+
+git pull
+git add Maggie
+git config --global user.email "adamsmao.m@gmail.com"
+git config --global user.name "Maggie Adams-Mao"
+git commit -m "initial commit"
+git push
